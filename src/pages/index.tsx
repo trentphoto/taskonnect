@@ -15,53 +15,62 @@ import Seo from '@/components/Seo';
  * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
  */
 
+import LogoWhite from '@/assets/svg/logo-white.svg';
+import Link from 'next/link';
+import Image from 'next/image';
+
 export default function HomePage() {
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      <Seo />
 
       <main>
-        <section className='bg-white'>
-          <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-            <h1 className='mt-4'>
-              Next.js + Tailwind CSS + TypeScript Starter
-            </h1>
-            <p className='mt-2 text-sm text-gray-800'>
-              A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
-              Import, Seo, Link component, pre-configured with Husky{' '}
-            </p>
-            <p className='mt-2 text-sm text-gray-700'>
-              <ArrowLink href='https://github.com/theodorusclarence/ts-nextjs-tailwind-starter'>
-                See the repository
-              </ArrowLink>
-            </p>
+        <nav>
+          {/* logo  */}
+          <LogoWhite />
 
-            <ButtonLink className='mt-6' href='/components' variant='light'>
-              See all components
-            </ButtonLink>
+          {/* links */}
+          <div>
+            <Link href="/solutions">Solutions</Link>
+            <Link href="/pricing">Pricing</Link>
+            <Link href="/products">Products</Link>
+            <Link href="/resources">Resources</Link>
+          </div>
 
-            <UnstyledLink
-              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-              className='mt-4'
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                width='92'
-                height='32'
-                src='https://vercel.com/button'
-                alt='Deploy with Vercel'
-              />
-            </UnstyledLink>
+          <div>
+            <ButtonLink href="/signin">Sign In</ButtonLink>
+            <ButtonLink href="/signup">Sign Up</ButtonLink>
+          </div>
 
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
+        </nav>
+
+        {/* hero section */}
+        <section>
+          <h1>Manage Your Apps</h1>
+          
+          <div>
+            <p>Sign up for updates</p>
+            <form action="">
+              <input type="email" name="email" id="email" placeholder="Your email address" />
+              <button>Start for Free</button>
+            </form>
+          </div>
+          <Image />
+
+          <div>
+            <h2>We're Passionate About Effective App Management.</h2>
+            <p>- James T, Co-Founder</p>
           </div>
         </section>
+
+        <section>
+          <div className="container">
+            <div className="rounded-2xl p-12 grid grid-cols-2">
+
+            </div>
+          </div>
+        </section>
+
+
       </main>
     </Layout>
   );
