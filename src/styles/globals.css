@@ -41,6 +41,15 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  body {
+    @apply bg-slate-950 text-white antialiased;
+  }
+
+  /* one-off colors  */
+  .bg-splash {
+    @apply bg-gradient-to-r from-green-400 to-lime-400;
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
