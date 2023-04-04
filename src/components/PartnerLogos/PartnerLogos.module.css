@@ -1,0 +1,49 @@
+.ticker {
+  --speed: 30s;
+  --gap: 0rem;
+  --color-gray-L800: #e8e8e8;
+  --color-gray-L300: #a8a8a8;
+  --logosColor: var(--color-gray-L800);
+  border: 1px var(--color-gray-L300) solid;
+  padding: 2em 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  gap: var(--gap);
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0,
+    #000 15%,
+    #000 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0,
+    #000 15%,
+    #000 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: relative;
+}
+
+.container {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: slide var(--speed) linear infinite;
+  opacity: 50%;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
