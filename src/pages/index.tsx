@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import * as React from 'react';
 import {
   FaArrowRight,
@@ -9,48 +8,28 @@ import {
   FaPlusCircle,
 } from 'react-icons/fa';
 
+import Footer from '@/components/Footer';
 import GrayCard from '@/components/GrayCard';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
-import NavLink from '@/components/links/NavLink';
+import Navbar from '@/components/Navbar';
 
 import iPad from '~/images/ipad.webp';
 import heroImage from '~/images/mockup.webp';
-import LogoWhite from '~/svg/logo-white.svg';
 
 export default function HomePage() {
   return (
     <Layout>
       <main className='relative'>
-        <nav className='w-full p-4 pb-20'>
-          <div className='container flex justify-between'>
-            {/* logo  */}
-            <div className='w-24'>
-              <LogoWhite width={200} height={40} />
-            </div>
-
-            {/* links */}
-            <div className='flex items-center gap-0'>
-              <NavLink href='solutions'>Solutions</NavLink>
-              <NavLink href='/pricing'>Pricing</NavLink>
-              <NavLink href='/products'>Products</NavLink>
-              <NavLink href='/resources'>Resources</NavLink>
-            </div>
-
-            <div className='flex items-center gap-2'>
-              <NavLink href='/signin'>Sign In</NavLink>
-              <ButtonLink href='/signup'>Sign Up</ButtonLink>
-            </div>
-          </div>
-        </nav>
+        <Navbar />
 
         {/* hero section */}
         <section className='pb-12'>
-          <div className='container flex flex-col items-start gap-12'>
-            <h1 className='uppercase tracking-tighter lg:text-[160px] lg:leading-[130px]'>
+          <div className='container flex flex-col items-start gap-12 p-4'>
+            <h1 className='w-2/3 text-4xl uppercase tracking-tighter lg:w-full lg:text-[160px] lg:leading-[130px]'>
               Manage Your Tasks.
             </h1>
-            <GrayCard>
+            <GrayCard className='w-full md:w-auto'>
               <h3 className='mb-6'>Sign up for updates</h3>
               <form action='' className='flex items-center gap-2'>
                 <input
@@ -75,9 +54,9 @@ export default function HomePage() {
             />
           </div>
 
-          <div className='mt-12 bg-white/5 p-20'>
+          <div className='mt-12 bg-white/5 p-8 py-20 md:px-20'>
             <div className='container'>
-              <div className='w-1/2'>
+              <div className='sm:w-1/2'>
                 <h2 className='mb-4 bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-4xl font-bold text-transparent'>
                   We're Passionate About Effective Task Management.
                 </h2>
@@ -88,7 +67,7 @@ export default function HomePage() {
         </section>
 
         <section>
-          <div className='container'>
+          <div className='container p-4'>
             <GrayCard className='grid gap-8 shadow-xl md:grid-cols-2'>
               <div>
                 <Image src={iPad} alt='iPad' width={800} height={800} />
@@ -121,22 +100,22 @@ export default function HomePage() {
         </section>
 
         <section className='py-20'>
-          <div className='container'>
+          <div className='container p-4'>
             <h2 className='mb-8 text-center'>Our Service</h2>
             <div className='grid gap-4 md:grid-cols-2'>
-              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between'>
+              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
                 <h3>Track Progress Dynamically</h3>
                 <FaPlusCircle className='text-2xl text-lime-500' />
               </GrayCard>
-              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between'>
+              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
                 <h3>Manage Your Team</h3>
                 <FaPlusCircle className='text-2xl text-lime-500' />
               </GrayCard>
-              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between'>
+              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
                 <h3>Get More Done</h3>
                 <FaPlusCircle className='text-2xl text-lime-500' />
               </GrayCard>
-              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between'>
+              <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
                 <h3>Spend Less Time Working</h3>
                 <FaPlusCircle className='text-2xl text-lime-500' />
               </GrayCard>
@@ -145,7 +124,7 @@ export default function HomePage() {
         </section>
 
         <section className='py-20'>
-          <div className='container'>
+          <div className='container p-4'>
             <div className='grid gap-12 md:grid-cols-5'>
               <div className='col-span-2'>
                 <h2 className='mb-2 text-3xl font-bold uppercase'>
@@ -191,10 +170,10 @@ export default function HomePage() {
 
         <section>
           <div className='flex items-center justify-center gap-8'>
-            <GrayCard className='p-4 px-8'>
+            <GrayCard className='!p-4 !px-8'>
               <div className='font-bold uppercase opacity-50'>Company</div>
             </GrayCard>
-            <GrayCard className='p-4 px-8'>
+            <GrayCard className='!p-4 !px-8'>
               <div className='font-bold uppercase opacity-50'>Individual</div>
             </GrayCard>
             <div className='bg-splash rounded-3xl p-8 px-12'>
@@ -202,19 +181,19 @@ export default function HomePage() {
                 Team Work
               </div>
             </div>
-            <GrayCard className='p-4 px-8'>
+            <GrayCard className='!p-4 !px-8'>
               <div className='font-bold uppercase opacity-50'>Management</div>
             </GrayCard>
-            <GrayCard className='p-4 px-8'>
+            <GrayCard className='!p-4 !px-8'>
               <div className='font-bold uppercase opacity-50'>Financial</div>
             </GrayCard>
           </div>
         </section>
 
         <section className='py-20'>
-          <div className='container'>
-            <GrayCard className='px-40 py-24 text-center'>
-              <h2 className='text-6xl'>
+          <div className='container p-4'>
+            <GrayCard className='px-10 py-24 text-center lg:px-40'>
+              <h2 className='text-4xl lg:text-6xl'>
                 Get everything done with{' '}
                 <span className='bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-transparent'>
                   TasKonnect
@@ -228,29 +207,7 @@ export default function HomePage() {
         </section>
       </main>
 
-      <footer className='w-full p-20'>
-        <div className='container flex justify-between'>
-          {/* logo  */}
-          <div className='w-24'>
-            <LogoWhite width={200} height={40} />
-          </div>
-
-          {/* links */}
-          <div className='flex items-center gap-4'>
-            <Link href='/solutions'>Solutions</Link>
-            <Link href='/pricing'>Pricing</Link>
-            <Link href='/products'>Products</Link>
-            <Link href='/resources'>Resources</Link>
-          </div>
-
-          <div className='text-xs opacity-50'>
-            <span>
-              © Copyright 2023. <br />
-              All Rights Reserved.
-            </span>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </Layout>
   );
 }

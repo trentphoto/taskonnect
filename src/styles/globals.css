@@ -41,6 +41,11 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-gradient-to-r from-slate-950 to-[#475B64] text-white antialiased;
   }
