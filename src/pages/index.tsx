@@ -8,11 +8,9 @@ import {
   FaPlusCircle,
 } from 'react-icons/fa';
 
-import Footer from '@/components/Footer';
 import GrayCard from '@/components/GrayCard';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
-import Navbar from '@/components/Navbar';
 
 import iPad from '~/images/ipad.webp';
 import heroImage from '~/images/mockup.webp';
@@ -21,8 +19,6 @@ export default function HomePage() {
   return (
     <Layout>
       <main className='relative'>
-        <Navbar />
-
         {/* hero section */}
         <section className='pb-12'>
           <div className='container flex flex-col items-start gap-12 p-4'>
@@ -31,15 +27,15 @@ export default function HomePage() {
             </h1>
             <GrayCard className='w-full md:w-auto'>
               <h3 className='mb-6'>Sign up for updates</h3>
-              <form action='' className='flex items-center gap-2'>
+              <form action='' className='flex items-center gap-4'>
                 <input
-                  className='mr-4 border-b border-white/40 border-l-transparent border-r-transparent border-t-transparent bg-transparent pl-0'
+                  className='border-b border-white/40 border-l-transparent border-r-transparent border-t-transparent bg-transparent pl-0'
                   type='email'
                   name='email'
                   id='email'
                   placeholder='Your email address'
                 />
-                <div className='bg-splash flex h-16 w-16 cursor-pointer items-center justify-center rounded-full p-4'>
+                <div className='bg-splash flex h-10 w-10 cursor-pointer items-center justify-center rounded-full p-3'>
                   <FaArrowRight className='text-2xl text-gray-900' />
                 </div>
               </form>
@@ -50,7 +46,7 @@ export default function HomePage() {
               alt='Hero Image'
               width={800}
               height={800}
-              className='absolute -right-80 top-20 lg:-right-20 lg:top-60'
+              className='absolute -right-60 top-20 sm:-right-80 md:-right-96 lg:top-60'
             />
           </div>
 
@@ -101,7 +97,7 @@ export default function HomePage() {
 
         <section className='py-20'>
           <div className='container p-4'>
-            <h2 className='mb-8 text-center'>Our Service</h2>
+            <h2 className='mb-8 text-center'>TasKonnect allows you to...</h2>
             <div className='grid gap-4 md:grid-cols-2'>
               <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
                 <h3>Track Progress Dynamically</h3>
@@ -123,7 +119,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className='py-20'>
+        <section className='pb-20'>
           <div className='container p-4'>
             <div className='grid gap-12 md:grid-cols-5'>
               <div className='col-span-2'>
@@ -190,7 +186,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className='py-20'>
+        <section className='pt-20'>
           <div className='container p-4'>
             <GrayCard className='px-10 py-24 text-center lg:px-40'>
               <h2 className='text-4xl lg:text-6xl'>
@@ -206,8 +202,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-
-      <Footer />
     </Layout>
   );
 }

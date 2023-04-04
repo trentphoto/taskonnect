@@ -4,7 +4,7 @@ import LogoWhite from '~/svg/logo-white.svg';
 
 export default function Footer() {
   return (
-    <footer className='w-full p-20'>
+    <footer className='w-full py-20'>
       <div className='container flex flex-col items-center justify-between gap-8 sm:flex-row'>
         {/* logo  */}
         <div className='w-50'>
