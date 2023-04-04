@@ -42,7 +42,7 @@
   }
 
   body {
-    @apply bg-slate-950 text-white antialiased;
+    @apply bg-gradient-to-r from-slate-950 to-[#475B64] text-white antialiased;
   }
 
   /* one-off colors  */

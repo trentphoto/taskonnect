@@ -1,28 +1,28 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
-import { FaAddressBook, FaArrowRight, FaPlusCircle } from 'react-icons/fa';
+import {
+  FaArrowRight,
+  FaChartBar,
+  FaCheckSquare,
+  FaComment,
+  FaPlusCircle,
+} from 'react-icons/fa';
 
 import GrayCard from '@/components/GrayCard';
 import Layout from '@/components/layout/Layout';
 import ButtonLink from '@/components/links/ButtonLink';
+import NavLink from '@/components/links/NavLink';
 
 import iPad from '~/images/ipad.webp';
 import heroImage from '~/images/mockup.webp';
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
 import LogoWhite from '~/svg/logo-white.svg';
 
 export default function HomePage() {
   return (
     <Layout>
-      <main>
-        <nav className='w-full p-4'>
+      <main className='relative'>
+        <nav className='w-full p-4 pb-20'>
           <div className='container flex justify-between'>
             {/* logo  */}
             <div className='w-24'>
@@ -30,25 +30,23 @@ export default function HomePage() {
             </div>
 
             {/* links */}
-            <div className='flex items-center gap-4'>
-              <Link href='/solutions'>Solutions</Link>
-              <Link href='/pricing'>Pricing</Link>
-              <Link href='/products'>Products</Link>
-              <Link href='/resources'>Resources</Link>
+            <div className='flex items-center gap-0'>
+              <NavLink href='solutions'>Solutions</NavLink>
+              <NavLink href='/pricing'>Pricing</NavLink>
+              <NavLink href='/products'>Products</NavLink>
+              <NavLink href='/resources'>Resources</NavLink>
             </div>
 
-            <div className=''>
-              <ButtonLink variant='ghost' href='/signin'>
-                Sign In
-              </ButtonLink>
+            <div className='flex items-center gap-2'>
+              <NavLink href='/signin'>Sign In</NavLink>
               <ButtonLink href='/signup'>Sign Up</ButtonLink>
             </div>
           </div>
         </nav>
 
         {/* hero section */}
-        <section className='relative pb-12'>
-          <div className='container relative flex flex-col items-start gap-12'>
+        <section className='pb-12'>
+          <div className='container flex flex-col items-start gap-12'>
             <h1 className='uppercase tracking-tighter lg:text-[160px] lg:leading-[130px]'>
               Manage Your Tasks.
             </h1>
@@ -73,11 +71,11 @@ export default function HomePage() {
               alt='Hero Image'
               width={800}
               height={800}
-              className='absolute -right-80 top-32'
+              className='absolute -right-80 top-20 lg:-right-20 lg:top-60'
             />
           </div>
 
-          <div className='mt-12 bg-gradient-to-r from-gray-800/50 to-transparent p-20'>
+          <div className='mt-12 bg-white/5 p-20'>
             <div className='container'>
               <div className='w-1/2'>
                 <h2 className='mb-4 bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-4xl font-bold text-transparent'>
@@ -158,21 +156,21 @@ export default function HomePage() {
                 </p>
                 <div className='border-b border-white/50 py-4'>
                   <div className='mb-2 flex items-center gap-2'>
-                    <FaAddressBook className='text-xl' />
+                    <FaChartBar className='text-xl' />
                     <h3>Track Progress Dynamically</h3>
                   </div>
                   <p>Visualize all your tasks in one place.</p>
                 </div>
                 <div className='border-b border-white/50 py-4'>
                   <div className='mb-2 flex items-center gap-2'>
-                    <FaAddressBook className='text-xl' />
+                    <FaComment className='text-xl' />
                     <h3>Keep Your Team Informed</h3>
                   </div>
                   <p>Update your team on the progress of your tasks.</p>
                 </div>
                 <div className='py-4'>
                   <div className='mb-2 flex items-center gap-2'>
-                    <FaAddressBook className='text-xl' />
+                    <FaCheckSquare className='text-xl' />
                     <h3>Don't Miss A Deadline</h3>
                   </div>
                   <p>Meet all your deadlines with ease.</p>
