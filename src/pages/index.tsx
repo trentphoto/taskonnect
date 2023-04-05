@@ -98,21 +98,21 @@ export default function HomePage() {
         <div className='container p-4'>
           <h2 className='mb-8 text-center'>TasKonnect allows you to...</h2>
           <div className='grid gap-4 md:grid-cols-2'>
-            <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
+            <GrayCard className='group flex cursor-pointer items-center justify-between shadow-lg transition-transform hover:scale-105'>
               <h3>Track Progress Dynamically</h3>
-              <FaPlusCircle className='text-2xl text-lime-500' />
+              <FaPlusCircle className='text-2xl text-lime-500 transition-transform duration-500 ease-in-out group-hover:rotate-180 group-hover:scale-125' />
             </GrayCard>
-            <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
+            <GrayCard className='group flex cursor-pointer items-center justify-between shadow-lg transition-transform hover:scale-105'>
               <h3>Manage Your Team</h3>
-              <FaPlusCircle className='text-2xl text-lime-500' />
+              <FaPlusCircle className='text-2xl text-lime-500 transition-transform duration-500 ease-in-out group-hover:rotate-180 group-hover:scale-125' />
             </GrayCard>
-            <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
+            <GrayCard className='group flex cursor-pointer items-center justify-between shadow-lg transition-transform hover:scale-105'>
               <h3>Get More Done</h3>
-              <FaPlusCircle className='text-2xl text-lime-500' />
+              <FaPlusCircle className='text-2xl text-lime-500 transition-transform duration-500 ease-in-out group-hover:rotate-180 group-hover:scale-125' />
             </GrayCard>
-            <GrayCard className='hover:bg-splash flex cursor-pointer items-center justify-between shadow-lg'>
+            <GrayCard className='group flex cursor-pointer items-center justify-between shadow-lg transition-transform hover:scale-105'>
               <h3>Spend Less Time Working</h3>
-              <FaPlusCircle className='text-2xl text-lime-500' />
+              <FaPlusCircle className='text-2xl text-lime-500 transition-transform duration-500 ease-in-out group-hover:rotate-180 group-hover:scale-125' />
             </GrayCard>
           </div>
         </div>

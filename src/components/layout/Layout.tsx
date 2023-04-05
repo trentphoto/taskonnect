@@ -6,7 +6,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div className='m-0 grid min-h-screen grid-rows-[auto_1fr_auto]'>
         <Navbar />
-        <main>{children}</main>
+        <main className='relative'>{children}</main>
         <Footer />
       </div>
     </>
