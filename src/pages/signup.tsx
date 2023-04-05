@@ -8,7 +8,7 @@ export default function SignUpPage() {
   return (
     <>
       <Layout>
-        <div className='container'>
+        <div className='container mb-60'>
           <GrayCard className=''>
             <h1 className='mb-5 text-center'>Let's Get Started</h1>
             <div className='mx-auto flex max-w-md flex-col items-center text-center'>

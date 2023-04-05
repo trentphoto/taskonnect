@@ -16,50 +16,54 @@ import iPad from '~/images/ipad.webp';
 import heroImage from '~/images/mockup.webp';
 
 export default function HomePage() {
+  const HeroSection = () => (
+    <section className='relative pb-12'>
+      <div className='container flex flex-col items-start gap-12 p-4'>
+        <h1 className='w-2/3 text-4xl uppercase tracking-tighter lg:w-full lg:text-[160px] lg:leading-[130px]'>
+          Manage Your Tasks.
+        </h1>
+        <GrayCard className='w-full md:w-auto'>
+          <h3 className='mb-6'>Sign up for updates</h3>
+          <form action='' className='flex items-center gap-4'>
+            <input
+              className='border-b border-white/40 border-l-transparent border-r-transparent border-t-transparent bg-transparent pl-0'
+              type='email'
+              name='email'
+              id='email'
+              placeholder='Your email address'
+            />
+            <div className='bg-splash flex h-10 w-10 cursor-pointer items-center justify-center rounded-full p-3'>
+              <FaArrowRight className='text-2xl text-gray-900' />
+            </div>
+          </form>
+        </GrayCard>
+
+        <Image
+          src={heroImage}
+          alt='Hero Image'
+          width={800}
+          height={800}
+          className='absolute -right-80 top-0 sm:-right-80 lg:-right-60 lg:top-20'
+        />
+      </div>
+
+      <div className='mt-12 bg-white/5 p-8 py-20 md:px-20'>
+        <div className='container'>
+          <div className='sm:w-1/2'>
+            <h2 className='mb-4 bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-4xl font-bold text-transparent'>
+              We're Passionate About Effective Task Management.
+            </h2>
+            <p>- James T, Co-Founder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <Layout>
       {/* hero section */}
-      <section className='pb-12'>
-        <div className='container flex flex-col items-start gap-12 p-4'>
-          <h1 className='w-2/3 text-4xl uppercase tracking-tighter lg:w-full lg:text-[160px] lg:leading-[130px]'>
-            Manage Your Tasks.
-          </h1>
-          <GrayCard className='w-full md:w-auto'>
-            <h3 className='mb-6'>Sign up for updates</h3>
-            <form action='' className='flex items-center gap-4'>
-              <input
-                className='border-b border-white/40 border-l-transparent border-r-transparent border-t-transparent bg-transparent pl-0'
-                type='email'
-                name='email'
-                id='email'
-                placeholder='Your email address'
-              />
-              <div className='bg-splash flex h-10 w-10 cursor-pointer items-center justify-center rounded-full p-3'>
-                <FaArrowRight className='text-2xl text-gray-900' />
-              </div>
-            </form>
-          </GrayCard>
-
-          <Image
-            src={heroImage}
-            alt='Hero Image'
-            width={800}
-            height={800}
-            className='absolute -right-60 top-20 sm:-right-80 md:-right-96 lg:top-60'
-          />
-        </div>
-
-        <div className='mt-12 bg-white/5 p-8 py-20 md:px-20'>
-          <div className='container'>
-            <div className='sm:w-1/2'>
-              <h2 className='mb-4 bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-4xl font-bold text-transparent'>
-                We're Passionate About Effective Task Management.
-              </h2>
-              <p>- James T, Co-Founder</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       <section>
         <div className='container p-4'>

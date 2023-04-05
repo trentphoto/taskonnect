@@ -1,11 +1,11 @@
 .ticker {
   --speed: 30s;
-  --gap: 0rem;
+  --gap: 1rem;
   --color-gray-L800: #e8e8e8;
   --color-gray-L300: #a8a8a8;
   --logosColor: var(--color-gray-L800);
   border: 1px var(--color-gray-L300) solid;
-  padding: 2em 0;
+  padding: 2em;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
@@ -44,6 +44,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-100% - var(--gap)));
   }
 }

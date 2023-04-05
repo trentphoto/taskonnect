@@ -21,7 +21,9 @@ export default function Navbar() {
         <MenuLinks />
 
         <div className='flex items-center gap-2'>
-          <NavLink href='/signin'>Sign In</NavLink>
+          <NavLink className='hidden sm:inline-block' href='/signin'>
+            Sign In
+          </NavLink>
           <ButtonLink href='/signup'>Sign Up</ButtonLink>
         </div>
       </div>
