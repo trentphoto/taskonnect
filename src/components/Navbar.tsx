@@ -14,8 +14,8 @@ export default function Navbar() {
       <div className='container flex items-center justify-between'>
         {/* logo  */}
         <div className='w-24'>
-          <Link href='/'>
-            <LogoWhite alt="Logo" width={200} height={40} />
+          <Link href='/' aria-label='Navigation Brand Logo'>
+            <LogoWhite alt='Logo' width={200} height={40} />
           </Link>
         </div>
 
