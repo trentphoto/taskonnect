@@ -3,7 +3,7 @@ import ButtonLink from '@/components/links/ButtonLink';
 
 export default function pricing() {
   return (
-    <Layout>
+    <Layout templateTitle='Pricing'>
       <section className=''>
         <div className='mx-auto max-w-screen-xl px-4 py-8 lg:px-6 lg:py-16'>
           <div className='mx-auto mb-8 max-w-screen-md text-center lg:mb-12'>

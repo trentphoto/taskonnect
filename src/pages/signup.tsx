@@ -15,7 +15,7 @@ export default function SignUpPage() {
 
   return (
     <>
-      <Layout>
+      <Layout templateTitle='Sign Up'>
         <div className='container mb-60'>
           <GrayCard className=''>
             {submitted ? (

@@ -5,7 +5,7 @@ import PartnerLogos from '@/components/PartnerLogos';
 export default function CustomersPage() {
   return (
     <>
-      <Layout>
+      <Layout templateTitle='Customers'>
         <div className='container mb-80 p-4 text-center'>
           <div className='mb-12 flex flex-col items-center gap-4'>
             <h1 className='h1'>Customers</h1>

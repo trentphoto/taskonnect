@@ -15,7 +15,7 @@ export default function SignInPage() {
 
   return (
     <>
-      <Layout>
+      <Layout templateTitle='Sign In'>
         <div className='container mb-60'>
           <GrayCard className=''>
             {submitted ? (
