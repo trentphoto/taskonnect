@@ -15,7 +15,7 @@ export default function Navbar() {
         {/* logo  */}
         <div className='w-24'>
           <Link href='/'>
-            <LogoWhite width={200} height={40} />
+            <LogoWhite alt="Logo" width={200} height={40} />
           </Link>
         </div>
 
