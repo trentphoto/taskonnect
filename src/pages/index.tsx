@@ -23,7 +23,7 @@ export default function HomePage() {
           Manage Your Tasks.
         </h1>
         <GrayCard className='w-full md:w-auto'>
-          <h3 className='mb-6'>Sign up for updates</h3>
+          <h2 className='h3 mb-6'>Sign up for updates</h2>
           <form action='' className='flex items-center gap-4'>
             <input
               className='border-b border-white/40 border-l-transparent border-r-transparent border-t-transparent bg-transparent pl-0'
