@@ -53,7 +53,7 @@ export default function HomePage() {
             <h2 className='mb-4 bg-gradient-to-r from-violet-700 to-sky-500 bg-clip-text text-4xl font-bold text-transparent'>
               We're Passionate About Effective Task Management.
             </h2>
-            <p>- James T, Co-Founder</p>
+            <p>- Everett T, Co-Founder</p>
           </div>
         </div>
       </div>

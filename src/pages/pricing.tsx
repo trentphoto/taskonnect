@@ -11,8 +11,7 @@ export default function pricing() {
               Designed for business teams like yours
             </h2>
             <p className='mb-5 font-light text-gray-500 dark:text-gray-400 sm:text-xl'>
-              Here at Flowbite we focus on markets where technology, innovation,
-              and capital can unlock long-term value and drive economic growth.
+              Discover a variety of plans that fit your needs.
             </p>
           </div>
           <div className='space-y-8 sm:gap-6 lg:grid lg:grid-cols-3 lg:space-y-0 xl:gap-10'>
