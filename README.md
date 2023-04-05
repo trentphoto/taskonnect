@@ -1,3 +1,3 @@
-# Next.js + Tailwind CSS + TypeScript Starter
+# TasKonnect Website
 
-Based off <a href="https://github.com/theodorusclarence/ts-nextjs-tailwind-starter">ts-nextjs-tailwind-starter</a> by Theodorus Clarence.
+A blazing-fast, statically generated website built with React, Next.js and TypeScript.
